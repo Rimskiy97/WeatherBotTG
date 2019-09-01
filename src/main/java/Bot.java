@@ -35,10 +35,14 @@ public class Bot extends TelegramLongPollingBot {
             if (message !=null && message.hasText()){
                 switch (message.getText()){
                 case "/help":
-                    sendMsg(message, "Чем могу быть полезен?");
+                    sendMsg(message, "Список комманд: /setting - настройка, /about - о проекте, /diary - дневник разработки");
                     break;
                 case "/setting":
                     sendMsg(message, "Что будем настраивать?");
+                case "/about":
+                    sendMsg(message, "Данный бот любительский тест, задуман в будущем как создание бота прогноза погоды");
+                case "/diary":
+                    sendMsg(message, "01.09.2019 - день рождения бота. Первые команды /setting, /diary версия 1.00." + "\n Первый патч 1.01. добавлен дневник /diary, добавлен /about");
                     break;
             default:
             }
